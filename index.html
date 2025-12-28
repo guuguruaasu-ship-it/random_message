@@ -36,8 +36,6 @@
 
 <script>
   const messages = [
-<script>
-  const messages = [
     "こういうの楽しい。いつもありがとう。",
     "－－・－・　(続きはWEBで)",
     "素敵な皆様との良き出会いに、キスを。……(続きはWEBで)",
@@ -63,22 +61,6 @@
   btn.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * messages.length);
     result.innerHTML = messages[randomIndex]; // <br>があるならinnerHTMLでOK
-    btn.disabled = true;
-    btn.textContent = "表示済み";
-  });
-</script>
-
-  ];
-
-  const btn = document.getElementById("drawBtn");
-  const result = document.getElementById("result");
-
-  btn.addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * messages.length);
-
-    // ★ここがポイント（brを効かせる）
-    result.innerHTML = messages[randomIndex];
-
     btn.disabled = true;
     btn.textContent = "表示済み";
   });
