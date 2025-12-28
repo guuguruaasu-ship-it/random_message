@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ランダム表示ツール</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      min-height: 2em;
+    }
+    button {
+      font-size: 20px;
+      padding: 12px 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showRandom()">表示する</button>
+  <div id="result"></div>
+
+  <script>
+    const messages = [
+      "フヒ、あ、あ、僕のことは空気だと思ってもろて……この僕に恋人なんてできると思ってなかったからまずそこで感謝。ｻﾞｽ……。惚気にも満たない話を聞いてくれる皆にも感謝ってことで……あ、あともちろんこういう場を設けて拙者みたいな陰キャでも参加しやすい匿名式で遊んでくれたりとか場を提供して許可してくれたケイト氏やリーチ兄弟氏にも感謝……──感謝の神、アザス──えっ何言ってるか分からない？さ、サセン……",
+      "歯は磨いたか？",
+      "昔、人を攻める側に初挑戦した時に多分オラオラしながら虐めればいいんだよな…と偏った知識だけで「お前服脱いで全裸で天ぷらを揚げてこいよ」って命令したら退室されました。なんで天ぷらでいけると思ったんだろう。3"
+    ];
+
+    function showRandom() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("result").textContent = messages[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
